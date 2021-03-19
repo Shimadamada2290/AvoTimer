@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from 'src/app/models/recipe';
 
 @Component({
   selector: 'app-category-screen',
@@ -7,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryScreenComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  categories = new Map<String, Recipe[]>();
 
   ingredients = [
     {
@@ -55,6 +53,41 @@ export class CategoryScreenComponent implements OnInit {
     },
   ];
 
+  recipes = [{
+    name: "Pancakes",
+    categoryName: "Breakfast",
+    ingredients: this.ingredients,
+  },
+  {
+    name: "Pancakes",
+    categoryName: "Breakfast",
+    ingredients: this.ingredients,
+  },
+  {
+    name: "Pancakes",
+    categoryName: "Breakfast",
+    ingredients: this.ingredients,
+  },
+  ];
+
+
+  constructor() {
+    this.categories.set('Breakfast', this.recipes);
+    this.categories.set('Fish', this.recipes);
+    this.categories.set('Meat', this.recipes);
+    this.categories.set('Vegetrian', this.recipes);
+    this.categories.set('Dessert', this.recipes);
+  }
+
+  ngOnInit(): void {
+  }
+
+  onCategorySelect(listOfRecipes:Recipe[]) {
+    console.log(listOfRecipes);
+  }
+
+
+
   //var steps = [
   //   {
   //    put (ingredientId:1),(ingredientId:2),(ingredientId:3),(ingredientId:4)and(ingredientId:1) into a --bowl 
@@ -66,10 +99,4 @@ export class CategoryScreenComponent implements OnInit {
   //  }
   //giot ]
 
-  recipe = {
-    name: "Pancakes",
-    categoryName: "Breakfast",
-    ingredients: ingredients,
-
-  };
 }

@@ -1,1 +1,7 @@
-<p>category-screen works!</p>
+<div class="h-100 bg-warning pr-5 d-flex align-items-center">
+    <div class="container bg-danger vh-25 vw-25">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let category of categories | keyvalue" (click)="onCategorySelect(category.value)">{{ category.key }}</li>
+          </ul>
+    </div>
+</div>

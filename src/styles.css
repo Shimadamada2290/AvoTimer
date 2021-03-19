@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.primary-avotimer {
+    background-color: #DDF7A1;
+}
+
+.left-v-bar {
+    background-color: #B7EA99;
+}
+
+.circle {
+    margin: auto;
+    height: 50vh;
+    width: 50vh;
+    background-color: #E0C290;
+    border-radius: 100%;
+}

@@ -4,7 +4,6 @@ import { CategoryScreenComponent } from '../components/category-screen/category-
 import { RecipesScreenComponent } from '../components/recipes-screen/recipes-screen.component';
 
 const routes: Routes = [
-  { path: '*', component: RecipesScreenComponent },
   { path: '', component: CategoryScreenComponent },
   { path: 'categories', component: CategoryScreenComponent },
   { path: 'recipes', component: RecipesScreenComponent },

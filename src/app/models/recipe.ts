@@ -1,0 +1,3 @@
+class Recipe {
+    name: string;
+}

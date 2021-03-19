@@ -1,3 +1,6 @@
-class Recipe {
+export class Recipe {
     name: string;
-}
+    categoryName;
+    ingredients;
+  }
+  

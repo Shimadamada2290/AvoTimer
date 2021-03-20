@@ -5,6 +5,7 @@
 
 .left-v-bar {
     background-color: #B7EA99;
+    background: radial-gradient(ellipse 75% 40% at 186.2%, transparent 0, transparent 190%, #B7EA99 100%);
 }
 
 .circle {
